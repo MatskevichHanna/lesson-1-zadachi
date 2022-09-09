@@ -1,2 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Введите координаты точки: ");
+Console.WriteLine("X: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Сonsole.WriteLine("Y: ");
+int y = Convert.ToInt32(Console.ReadLine());
+
+string Quarter(int xc, int yc)
+{
+    if(xc > 0 && yc > 0) return "Первая четверть";
+    if(xc < 0 && yc > 0) return "Вторая четверть";
+    if(xc < 0 && yc < 0) return "Третья четверть";
+    if(xc > 0 && yc < 0) return "Четвертая четверть";
+    return "Введены некорректные координаты";
+}
+string result = Quarter(x, y);
+Console.WriteLine(result);
