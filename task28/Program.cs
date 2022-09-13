@@ -24,4 +24,4 @@ int MultNumbers(int num)
 }
 
 int multNumbers = MultNumbers(number);
-Console.WriteLine($"Факториал числа !{number} = {multNumbers}");
+Console.WriteLine($"Факториал числа {number}! = {multNumbers}");
