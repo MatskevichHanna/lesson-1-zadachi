@@ -39,6 +39,6 @@ int RandomPositivNumbers(int[] array)
 int[] arr = CreateArrayRndInt(10, 100, 1000);
 PrintArray(arr);
 int result = RandomPositivNumbers(arr);
-Console.WriteLine();
+//Console.WriteLine();
 int count = RandomPositivNumbers(arr);
-Console.WriteLine($"Количество четных чисел в массиве: {result} ");
+Console.WriteLine($" -> чётных чисел в массиве {result} ");
