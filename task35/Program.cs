@@ -20,6 +20,16 @@ int[] CreateArrayRndInt(int size, int min, int max)
     return array;
 }
 
+int Change(int[] array)
+{
+    int count = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i] >= 10 && array[i] <= 99) count ++;
+    }
+    return count;
+}
+
 void PrintArray(int[] array)
 {
     Console.Write("[");
@@ -29,16 +39,6 @@ void PrintArray(int[] array)
         else Console.Write($"{array[i]}");
     }
     Console.Write("]");
-}
-
-int[] Change(int[] array)
-{
-    int count = 0;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if(array[i] >= 10 & array[i] <= 99) count ++;
-    }
-    return count;
 }
 
 // int n = 0;
@@ -53,7 +53,6 @@ int[] Change(int[] array)
 // {
 //     Console.Write("Ошибка ввода, введите число: ");
 // }
-
 
 int[] arr = CreateArrayRndInt(123, 0, 999);
 PrintArray(arr);
