@@ -42,19 +42,15 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int ValueElementPosition(int[,] matrix)
+void ValueElementPosition(int[,] matrix)
 {
-    int result = 0;
     if (i < matrix.GetLength(0) && j < matrix.GetLength(1))
     {
         Console.WriteLine($"Элемен находящихся на позиции {i},{j} равен {matrix[i, j]}");
-        result = matrix[i, j];
     } 
     else Console.WriteLine($"Такого элемента нет");
-    return result;
 }
 
 int[,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
 PrintMatrix(array2D);
-int resultElem = ValueElementPosition(array2D);
-
+ValueElementPosition(array2D);
