@@ -9,9 +9,10 @@
 
 Console.Clear();
 Console.WriteLine("Ввведите индекс элемента в строке: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
+int i = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Ввведите индекс элемента в столбце: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
+int j = Convert.ToInt32(Console.ReadLine());
+
 
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
@@ -41,25 +42,19 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-
-
-int  ValueElementPosition(int[,] matrix)
+int ValueElementPosition(int[,] matrix)
 {
     int result = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    if (i < matrix.GetLength(0) && j < matrix.GetLength(1))
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (i == num1 && j == num2) result = matrix[i, j];
-            else Console.WriteLine($"Такого элемента нет");
-        }
-    }
+        Console.WriteLine($"Элемен находящихся на позиции {i},{j} равен {matrix[i, j]}");
+        result = matrix[i, j];
+    } 
+    else Console.WriteLine($"Такого элемента нет");
     return result;
 }
 
 int[,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
 PrintMatrix(array2D);
+int resultElem = ValueElementPosition(array2D);
 
-int numResult = ValueElementPosition(array2D);
-Console.WriteLine();
-Console.WriteLine($"Элемен находящихся на позиции {num1},{num2} равен {numResult}");
