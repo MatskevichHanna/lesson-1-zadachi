@@ -54,7 +54,6 @@ double ArithmeticMeanColumns(int[,] matrix)
 int[,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
 PrintMatrix(array2D);
 Console.WriteLine();
-// int arithmetic = 
 ArithmeticMeanColumns(array2D);
 
 
