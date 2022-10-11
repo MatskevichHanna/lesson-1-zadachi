@@ -20,4 +20,4 @@ int AckermanFunction(int numM, int numN)
 }
 
 int result = AckermanFunction(numberM, numberN);
-Console.WriteLine($"{result}");
+Console.WriteLine($"A({numberM},{numberN}) -> {result}");
