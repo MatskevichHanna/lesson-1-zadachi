@@ -8,7 +8,6 @@ Console.Write("Введите число M: ");
 int numberM = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число N: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
-
 if (numberM < 0 || numberN < 0) Console.WriteLine($"Введите числа от 0 до 4");
 
 int AckermanFunction(int numM, int numN)
@@ -21,3 +20,4 @@ int AckermanFunction(int numM, int numN)
 
 int result = AckermanFunction(numberM, numberN);
 Console.WriteLine($"A({numberM},{numberN}) -> {result}");
+
